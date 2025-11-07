@@ -178,7 +178,7 @@ app.MapGet("/administradores/{id}", ([FromRoute] int id, IAdministradorServico a
     Email = administrador.Email,
     Perfil = administrador.Perfil
   });
-}).RequireAuthorization().RequireAuthorization(policy => policy.RequireRole("Adm")).WithTags("Administradores");
+}).RequireAuthorization().WithTags("Administradores");
 
 
 app.MapPost("/administradores", ([FromBody] AdministradorDTO administradorDTO, IAdministradorServico administradorServico) =>
