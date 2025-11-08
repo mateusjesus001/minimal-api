@@ -65,7 +65,7 @@ public class AdministradorServicoTest
 
 
        //Assert
-        Assert.AreEqual(1, admDoBanco.Id);
+        Assert.AreEqual(1, admDoBanco?.Id);
        
     }
 }
